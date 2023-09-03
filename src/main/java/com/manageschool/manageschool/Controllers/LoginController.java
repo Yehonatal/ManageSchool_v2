@@ -11,6 +11,7 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 public class LoginController implements Initializable {
@@ -28,16 +29,25 @@ public class LoginController implements Initializable {
         acc_selector.setItems(FXCollections.observableArrayList(AccountType.ADMIN, AccountType.STUDENT));
         acc_selector.setValue(Model.getInstance().getViewFactory().getLoginAccountType());
         acc_selector.valueProperty().addListener(observable -> Model.getInstance().getViewFactory().setLoginAccountType(acc_selector.getValue()));
-        login_btn.setOnAction(event -> onLogin());
+        login_btn.setOnAction(event -> {
+            try {
+                onLogin();
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
+        });
     }
 
-    private void onLogin() {
+    private void onLogin() throws SQLException {
         Stage stage = (Stage) error_lbl.getScene().getWindow();
         Model.getInstance().getViewFactory().closeStage(stage);
 
-        if (Model.getInstance().getViewFactory().getLoginAccountType() == AccountType.ADMIN){
+        String user = username_field.getText();
+        String psw = user_password_field.getText();
+
+        if (Model.getInstance().getViewFactory().getLoginAccountType() == AccountType.ADMIN && Model.getInstance().getVerified(user,psw,"admin")){
             Model.getInstance().getViewFactory().showAdminWindow();
-        } else {
+        } else if (Model.getInstance().getViewFactory().getLoginAccountType() == AccountType.STUDENT && Model.getInstance().getVerified(user,psw,"student")) {
             Model.getInstance().getViewFactory().showStudentWindow();
         }
     }

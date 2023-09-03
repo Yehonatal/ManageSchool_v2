@@ -87,7 +87,20 @@
     -fx-background-radius: 5px;
 }
 
-.login_form_container Button:hover {
+ .close_btn {
+    -fx-font-size: 1.015em;
+    -fx-text-fill: #FFC75F;
+    -fx-background-color: #FFFFFF;
+    -fx-cursor: hand;
+    -fx-font-weight: Bold;
+    -fx-border-color: #FFC75F;
+    -fx-font-family: Calibri;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(three-pass-box, #AAAAAA, 0, 0 , 0 , 2);
+    -fx-border-radius: 5 5 5 5;
+}
+
+.login_form_container Button:hover{
     -fx-text-fill: #FFC75F;
     -fx-background-color: #FFFFFF;
     -fx-cursor: hand;

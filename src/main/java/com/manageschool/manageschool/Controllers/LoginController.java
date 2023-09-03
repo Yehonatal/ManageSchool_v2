@@ -4,6 +4,7 @@ import com.manageschool.manageschool.Models.GetDataForLogin;
 import com.manageschool.manageschool.Models.Model;
 import com.manageschool.manageschool.Views.AccountType;
 import javafx.collections.FXCollections;
+import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
@@ -23,6 +24,7 @@ public class LoginController implements Initializable {
     public TextField user_password_field;
     public Button login_btn;
     public Label error_lbl;
+    public Button close_btn;
 
 
     @Override
@@ -57,6 +59,13 @@ public class LoginController implements Initializable {
         } else {
             System.out.println("not working!");
         }
+    }
+
+
+    public void closeLoginStage() {
+        Stage stage = (Stage) error_lbl.getScene().getWindow();
+        Model.getInstance().getViewFactory().closeStage(stage);
+
     }
 }
 

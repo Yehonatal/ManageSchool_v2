@@ -1,6 +1,8 @@
 
 # ManageSchool
 
+![login preview](images/login.png)
+
 This is a simple Student Management System project with a focus on managing students, courses, and grades.
 
 ## Program Structure

@@ -1,0 +1,50 @@
+.table-view {
+    -fx-background-color: #FFC75F;
+    -fx-background-radius: 10px;
+
+}
+
+.table-column {
+    -fx-background-color: #FFC75F;
+    -fx-text-fill: white;
+}
+
+
+
+.table-view .column-header-background .filler .first-column {
+    -fx-background-radius: 10 0 0 0; /
+}
+
+.table-view .column-header-background .filler .last-column {
+    -fx-background-radius: 0 10 0 0;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #FFC75F33;
+}
+
+
+.table-row-cell:odd {
+    -fx-background-color: #FFE0A8;
+}
+
+.enroll_btn   {
+    -fx-background-color: #FFC75F;
+    -fx-text-fill: white;
+}
+.enroll_btn:hover {
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-border-radius: 5 5 5 5;
+    -fx-border-color: #FFC75F;
+    -fx-text-fill:  #132A13;
+    -fx-background-color:  #FFFFFF;
+}
+
+.to_enroll_filed {
+     -fx-background-color: #FFFFFF;
+     -fx-font-size: 1.2em;
+     -fx-background-radius: 5px;
+     -fx-pref-height: 35;
+     -fx-effect: dropshadow(three-pass-box, #AAAAAA, 4 , 0 , 0 , 2);
+ }

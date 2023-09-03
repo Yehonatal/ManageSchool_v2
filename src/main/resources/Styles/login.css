@@ -111,7 +111,9 @@
 }
 
 .error_lbl {
-    -fx-text-fill: red;
+    -fx-text-fill: tomato;
+    -fx-font-weight: Bold;
+    -fx-alignment: center;
 }
 
 

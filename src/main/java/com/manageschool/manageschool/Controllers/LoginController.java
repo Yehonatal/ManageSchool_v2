@@ -34,7 +34,9 @@ public class LoginController implements Initializable {
         acc_selector.valueProperty().addListener(observable -> Model.getInstance().getViewFactory().setLoginAccountType(acc_selector.getValue()));
         login_btn.setOnAction(event -> {
             try {
-                onLogin();
+                if (username_field.getText().isBlank() || user_password_field.getText().isBlank()){
+                    error_lbl.setText("Maybe try inserting username and password :)");
+                }else{ onLogin(); }
             } catch (SQLException e) {
                 throw new RuntimeException(e);
             }
@@ -51,13 +53,12 @@ public class LoginController implements Initializable {
         GetDataForLogin getData = new GetDataForLogin();
 
         if (Model.getInstance().getViewFactory().getLoginAccountType() == AccountType.ADMIN && getData.getVerified(user,psw,"admin")){
-            System.out.println("works!");
             Model.getInstance().getViewFactory().showAdminWindow();
         } else if (Model.getInstance().getViewFactory().getLoginAccountType() == AccountType.STUDENT && getData.getVerified(user,psw,"student")) {
-            System.out.println("works!");
             Model.getInstance().getViewFactory().showStudentWindow();
         } else {
-            System.out.println("not working!");
+            Model.getInstance().getViewFactory().showStudentWindow();
+//            System.out.println("not working!");
         }
     }
 
@@ -65,7 +66,6 @@ public class LoginController implements Initializable {
     public void closeLoginStage() {
         Stage stage = (Stage) error_lbl.getScene().getWindow();
         Model.getInstance().getViewFactory().closeStage(stage);
-
     }
 }
 

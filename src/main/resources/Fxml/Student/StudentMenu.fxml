@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="216.0" styleClass="main_menu_container" stylesheets="@../../Styles/StudentMenu.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.manageschool.manageschool.Controllers.Student.StudentMenuController">
+    <AnchorPane prefHeight="702.0" prefWidth="154.0" styleClass="left_container">
+        <VBox layoutY="13.0" prefHeight="297.0" prefWidth="196.0" styleClass="title_container" AnchorPane.bottomAnchor="420.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <ImageView fitHeight="85.0" fitWidth="90.0" translateY="65.0">
+                <Image url="@../../Images/school.png"/>
+            </ImageView>
+        </VBox>
+        <VBox prefHeight="500.0" prefWidth="180.0" styleClass="menu_container" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="100.0">
+            <Button fx:id="courses_btn" mnemonicParsing="false" prefWidth="150.0" styleClass="btn" text="Courses" textAlignment="CENTER" translateX="5.0" translateY="65.0">
+                <graphic>
+                    <FontAwesomeIconView glyphName="HOME" size="15" />
+                </graphic>
+            </Button>
+            <Button fx:id="report_cards" mnemonicParsing="false" prefWidth="150.0" styleClass="btn" text="Report Cards" textAlignment="CENTER" translateX="5.0" translateY="65.0">
+                <graphic>
+                    <FontAwesomeIconView glyphName="HANDSHAKE_ALT" size="15" />
+                </graphic>
+            </Button>
+            <Line endX="120.0" translateX="5.0" translateY="65.0" />
+            <Button fx:id="profile_btn" mnemonicParsing="false" prefWidth="150.0" styleClass="alt_menu_btn" text="Profile" textAlignment="CENTER" translateX="5.0" translateY="65.0">
+                <graphic>
+                    <FontAwesomeIconView glyphName="USER" size="15" />
+                </graphic>
+            </Button>
+            <Button fx:id="logout_btn" mnemonicParsing="false" prefWidth="150.0" styleClass="alt_menu_btn" text="Logout" textAlignment="CENTER" translateX="5.0" translateY="65.0">
+                <graphic>
+                    <FontAwesomeIconView glyphName="EXTERNAL_LINK" size="15" />
+                </graphic>
+            </Button>
+        </VBox>
+        <VBox layoutX="9.0" prefHeight="120.0" prefWidth="156.0" styleClass="report_container" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0">
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="Label" text="Report ?" />
+            <TextFlow>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Use this to report any error and suggestions." />
+            </TextFlow>
+            <Button fx:id="report_btn" mnemonicParsing="false" text="Report">
+                <graphic>
+                    <FontAwesomeIconView glyphName="PLUS" />
+                </graphic>
+            </Button>
+        </VBox>
+    </AnchorPane>
+</VBox>

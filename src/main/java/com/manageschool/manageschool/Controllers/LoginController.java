@@ -49,11 +49,13 @@ public class LoginController implements Initializable {
         GetDataForLogin getData = new GetDataForLogin();
 
         if (Model.getInstance().getViewFactory().getLoginAccountType() == AccountType.ADMIN && getData.getVerified(user,psw,"admin")){
-            System.out.println("work!");
+            System.out.println("works!");
             Model.getInstance().getViewFactory().showAdminWindow();
-        } else if (Model.getInstance().getViewFactory().getLoginAccountType() == AccountType.STUDENT && getData.getVerified(user,psw,"admin")) {
-            System.out.println("work!");
+        } else if (Model.getInstance().getViewFactory().getLoginAccountType() == AccountType.STUDENT && getData.getVerified(user,psw,"student")) {
+            System.out.println("works!");
             Model.getInstance().getViewFactory().showStudentWindow();
+        } else {
+            System.out.println("not working!");
         }
     }
 }

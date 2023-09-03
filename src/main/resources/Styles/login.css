@@ -88,7 +88,7 @@
 }
 
 .login_form_container Button:hover {
-    -fx-text-fill: #2570e8;
+    -fx-text-fill: #FFC75F;
     -fx-background-color: #FFFFFF;
     -fx-cursor: hand;
     -fx-font-weight: Bold;

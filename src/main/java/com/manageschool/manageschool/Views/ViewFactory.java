@@ -4,6 +4,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import javafx.scene.image.Image;
+
 public class ViewFactory {
     private AccountType loginAccountType;
     // Student View
@@ -14,6 +16,7 @@ public class ViewFactory {
     public ViewFactory(){
         this.loginAccountType = AccountType.STUDENT;
     }
+
 
     public AccountType getLoginAccountType() {return loginAccountType;}
 
@@ -36,8 +39,11 @@ public class ViewFactory {
         }catch (Exception e){
             e.printStackTrace();
         }
+
         Stage stage = new Stage();
         stage.setScene(scene);
+        Image icon = new Image(getClass().getResourceAsStream("/Images/school.png"));
+        stage.getIcons().add(icon);
         stage.setTitle("Manage School");
         stage.show();
     }

@@ -2,7 +2,7 @@ package com.manageschool.manageschool.Models;
 
 import java.sql.*;
 
-public class GetData {
+public class GetDataForLogin {
     public boolean getVerified(String usr, String psw, String table) throws SQLException {
         if (table.equals("admin")) {
             return selectData(usr, psw, "adminLog", "adminUserName", "adminUserPsw");

@@ -4,6 +4,7 @@ import com.manageschool.manageschool.Models.Model;
 import javafx.application.Application;
 import javafx.stage.Stage;
 
+
 public class App extends Application {
 
     @Override

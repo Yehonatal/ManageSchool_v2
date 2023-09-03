@@ -6,7 +6,7 @@
 /* Logo */
 .login_logo_container {
     -fx-font-family: Calibri;
-    -fx-background-color: #2570e8;
+    -fx-background-color: #FFC75F;
     -fx-alignment: top;
     -fx-background-radius: 0 0 0 0;
 }
@@ -27,7 +27,7 @@
 
 /* Account Selector Choice Box styles */
 .account_selector {
-    -fx-background-color: #2570e8;
+    -fx-background-color: #FFC75F;
     -fx-font-weight: Bold;
 }
 
@@ -59,7 +59,7 @@
     -fx-background-color: #EEEEEE;
     -fx-font-family: Calibri;
     -fx-alignment: top_left;
-    -fx-effect: dropshadow(three-pass-box, #AAAAAA, 4 , 0 , 0 , 4);
+    -fx-effect: dropshadow(three-pass-box, #AAAAAA, 4 , 0 , 0 , 2);
 }
 
 .login_form_container Label {
@@ -71,19 +71,19 @@
     -fx-font-size: 1.2em;
     -fx-background-radius: 5px;
     -fx-pref-height: 35;
-    -fx-effect: dropshadow(three-pass-box, #AAAAAA, 4 , 0 , 0 , 4);
+    -fx-effect: dropshadow(three-pass-box, #AAAAAA, 4 , 0 , 0 , 2);
 }
 
 .login_form_container Button {
     -fx-margin-top: 10;
-    -fx-background-color: #2570e8;
+    -fx-background-color: #FFC75F;
     -fx-text-fill: #FFFFFF;
     -fx-font-size: 1.015em;
     -fx-pref-height: 35;
     -fx-pref-width: 350;
     -fx-font-family: Calibri;
     -fx-font-weight: bold;
-    -fx-effect: dropshadow(three-pass-box, #AAAAAA, 4 , 0 , 0 , 4);
+    -fx-effect: dropshadow(three-pass-box, #AAAAAA, 4 , 0 , 0 , 2);
     -fx-background-radius: 5px;
 }
 
@@ -92,8 +92,8 @@
     -fx-background-color: #FFFFFF;
     -fx-cursor: hand;
     -fx-font-weight: Bold;
-    -fx-border-color: #2570e8;
-    -fx-effect: dropshadow(three-pass-box, #AAAAAA, 0, 0 , 0 , 0);
+    -fx-border-color: #FFC75F;
+    -fx-effect: dropshadow(three-pass-box, #AAAAAA, 0, 0 , 0 , 2);
     -fx-border-radius: 5 5 5 5;
 }
 

@@ -15,24 +15,24 @@
 <?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@../Styles/login.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.manageschool.manageschool.Controllers.LoginController">
-    <VBox alignment="TOP_CENTER" prefHeight="400.0" prefWidth="200.0" style="-fx-alignment: center;" styleClass="login_logo_container" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
-        <ImageView fitHeight="145.0" fitWidth="160.0" translateY="-45.0">
-            <Image url="@../Images/school.png"/>
+    <VBox alignment="TOP_CENTER" prefHeight="400.0" prefWidth="317.0" style="-fx-alignment: center;" styleClass="login_logo_container" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <ImageView fitHeight="145.0" fitWidth="160.0" translateX="-50.0" translateY="-45.0">
+            <Image url="@../Images/school.png" />
         </ImageView>
       
-        <Separator prefWidth="200.0" translateY="-45.0">
+        <Separator prefWidth="200.0" translateX="-25.0" translateY="-45.0">
          <padding>
-            <Insets bottom="5.0" left="50.0" right="50.0" top="10.0" />
+            <Insets bottom="5.0" left="50.0" right="100.0" top="10.0" />
          </padding>
       </Separator>
       <GlyphsStack />
-      <Label text="help 101" textFill="WHITE" translateY="-45.0">
+      <Label text="help 101" textFill="WHITE" translateX="-50.0" translateY="-45.0">
          <font>
             <Font name="Calibri Bold" size="16.0" />
          </font>
       </Label>
-      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Manage School" translateY="-45.0" />
-      <Label text="Copyright (c). All Rights Reserved" textFill="WHITE" translateY="82.0" />
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Manage School" translateX="-50.0" translateY="-45.0" />
+      <Label text="Copyright (c). All Rights Reserved" textFill="WHITE" translateX="-45.0" translateY="85.0" />
     </VBox>
     <VBox layoutX="251.0" layoutY="35.0" prefHeight="330.0" prefWidth="298.0" styleClass="login_form_container" AnchorPane.rightAnchor="51.0" AnchorPane.topAnchor="35.0">
         <Label id="choice-prompt-text " text="Choose Your Account Type" />

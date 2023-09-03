@@ -1,5 +1,6 @@
 package com.manageschool.manageschool.Controllers;
 
+import com.manageschool.manageschool.Models.GetData;
 import com.manageschool.manageschool.Models.Model;
 import com.manageschool.manageschool.Views.AccountType;
 import javafx.collections.FXCollections;
@@ -45,9 +46,13 @@ public class LoginController implements Initializable {
         String user = username_field.getText();
         String psw = user_password_field.getText();
 
-        if (Model.getInstance().getViewFactory().getLoginAccountType() == AccountType.ADMIN && Model.getInstance().getVerified(user,psw,"admin")){
+        GetData getData = new GetData();
+
+        if (Model.getInstance().getViewFactory().getLoginAccountType() == AccountType.ADMIN && getData.getVerified(user,psw,"admin")){
+            System.out.println("work!");
             Model.getInstance().getViewFactory().showAdminWindow();
-        } else if (Model.getInstance().getViewFactory().getLoginAccountType() == AccountType.STUDENT && Model.getInstance().getVerified(user,psw,"student")) {
+        } else if (Model.getInstance().getViewFactory().getLoginAccountType() == AccountType.STUDENT && getData.getVerified(user,psw,"admin")) {
+            System.out.println("work!");
             Model.getInstance().getViewFactory().showStudentWindow();
         }
     }

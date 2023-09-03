@@ -1,0 +1,104 @@
+.login_container {
+    -fx-font-family: Calibri;
+    -fx-background-color: #FFFFFF;
+}
+
+/* Logo */
+.login_logo_container {
+    -fx-font-family: Calibri;
+    -fx-background-color: #2570e8;
+    -fx-alignment: top;
+    -fx-background-radius: 0 0 0 0;
+}
+
+.login_logo_container Text {
+    -fx-font-size: 2em;
+    -fx-fill: #fff;
+    -fx-font-weight: bold;
+}
+
+.login_logo_container FontAwesomeIconView {
+    -fx-fill: #FFF;
+}
+
+.login_input_box {
+    -fx-background-color: #FFFFFF ;
+}
+
+/* Account Selector Choice Box styles */
+.account_selector {
+    -fx-background-color: #2570e8;
+    -fx-font-weight: Bold;
+}
+
+.account_selector .label {
+    -fx-text-fill: white;
+    -fx-font-family: Calibri;
+    -fx-font-size: 1em;
+}
+
+.account_selector .arrow {
+    -fx-background-color: #FFF;
+}
+
+#choice-box-popup-menu {
+    -fx-font-family: Calibri;
+    -fx-background-color: #9ec3ff;
+}
+
+/* Login Form Styles */
+
+#choice-prompt-text {
+    -fx-font-weight: 400;
+}
+
+.login_form_container {
+    -fx-background-radius: 10 10 10 10;
+    -fx-padding: 20;
+    -fx-spacing: 15;
+    -fx-background-color: #EEEEEE;
+    -fx-font-family: Calibri;
+    -fx-alignment: top_left;
+    -fx-effect: dropshadow(three-pass-box, #AAAAAA, 4 , 0 , 0 , 4);
+}
+
+.login_form_container Label {
+    -fx-font-size: 1em;
+}
+
+.input_field {
+    -fx-background-color: #FFFFFF;
+    -fx-font-size: 1.2em;
+    -fx-background-radius: 5px;
+    -fx-pref-height: 35;
+    -fx-effect: dropshadow(three-pass-box, #AAAAAA, 4 , 0 , 0 , 4);
+}
+
+.login_form_container Button {
+    -fx-margin-top: 10;
+    -fx-background-color: #2570e8;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 1.015em;
+    -fx-pref-height: 35;
+    -fx-pref-width: 350;
+    -fx-font-family: Calibri;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(three-pass-box, #AAAAAA, 4 , 0 , 0 , 4);
+    -fx-background-radius: 5px;
+}
+
+.login_form_container Button:hover {
+    -fx-text-fill: #2570e8;
+    -fx-background-color: #FFFFFF;
+    -fx-cursor: hand;
+    -fx-font-weight: Bold;
+    -fx-border-color: #2570e8;
+    -fx-effect: dropshadow(three-pass-box, #AAAAAA, 0, 0 , 0 , 0);
+    -fx-border-radius: 5 5 5 5;
+}
+
+.error_lbl {
+    -fx-text-fill: red;
+}
+
+

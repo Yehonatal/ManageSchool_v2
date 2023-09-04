@@ -80,7 +80,7 @@
       </AnchorPane>
     </HBox>
     <VBox layoutX="735.0" layoutY="120.0" prefHeight="180.0" prefWidth="200.0" styleClass="summary_view" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="120.0">
-        <VBox prefHeight="200.0" prefWidth="177.0" styleClass="acc_summary_container">
+        <VBox prefHeight="170.0" prefWidth="143.0" styleClass="acc_summary_container">
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Grade cut off" />
             <Label styleClass="cutoff_grade" text="&gt; 2.5">
                 <font>
@@ -92,6 +92,12 @@
                 <font>
                     <Font name="Arial Bold" size="12.0" />
                 </font></Label>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <VBox.margin>
+            <Insets right="10.0" />
+         </VBox.margin>
         </VBox>
     </VBox>
     <Text layoutX="20.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="section_title" text="School Status" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="90.0" />
@@ -102,23 +108,23 @@
         </padding>
         <TextFlow />
     </VBox>
-   <TableView fx:id="latest_courses_table" layoutX="20.0" layoutY="371.0" prefHeight="146.0" prefWidth="542.0">
+   <TableView fx:id="latest_courses_table" layoutX="20.0" layoutY="371.0" prefHeight="146.0" prefWidth="809.0" styleClass="round">
      <columns>
-       <TableColumn prefWidth="24.0" text="#" />
-       <TableColumn prefWidth="204.0" text="Course Title " />
-         <TableColumn prefWidth="154.0" text="Course Code" />
-         <TableColumn prefWidth="83.0" text="ECTS" />
-         <TableColumn prefWidth="76.0" text="Cr.Hr" />
+       <TableColumn prefWidth="24.0" styleClass="first_column" text="#" />
+       <TableColumn prefWidth="493.0" text="Course Title " />
+         <TableColumn prefWidth="106.0" text="Course Code" />
+         <TableColumn prefWidth="100.0" text="ECTS" />
+         <TableColumn prefWidth="85.0" styleClass="last_column" text="Cr.Hr" />
      </columns>
    </TableView>
    <Text layoutX="20.0" layoutY="552.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="section_title" text="Best Students" />
-   <TableView fx:id="best_student_table" layoutX="20.0" layoutY="570.0" prefHeight="146.0" prefWidth="542.0">
+   <TableView fx:id="best_student_table" layoutX="20.0" layoutY="570.0" prefHeight="146.0" prefWidth="809.0" styleClass="round">
       <columns>
          <TableColumn prefWidth="24.0" text="#" />
-         <TableColumn prefWidth="204.0" text="Student Name" />
-         <TableColumn prefWidth="154.0" text="Student Id" />
-         <TableColumn prefWidth="83.0" text="Course Code" />
-         <TableColumn prefWidth="76.0" text="Grade" />
+         <TableColumn prefWidth="491.0" styleClass="first_column" text="Student Name" />
+         <TableColumn prefWidth="108.0" text="Student Id" />
+         <TableColumn prefWidth="104.0" text="Course Code" />
+         <TableColumn prefWidth="81.0" styleClass="last_column" text="Grade" />
       </columns>
    </TableView>
    <Label layoutX="19.0" layoutY="19.0" text="Lakeside Elementary School">

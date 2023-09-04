@@ -15,11 +15,15 @@
     -fx-font-size: 1.2em;
     -fx-font-family: "Calibri Light";
 }
+.round {
+    -fx-background-radius: 10;
+}
+
 
 /* Accounts View*/
 .status_view {
     -fx-background-color: #FFFFFF;
-    -fx-background-radius: 10 0 0 10;
+    -fx-background-radius: 20 0 0 20;
     -fx-padding: 10 0 10 0;
     -fx-alignment: center;
     -fx-border-width: 0 1 0 0;
@@ -29,7 +33,7 @@
 
 .status_box {
     -fx-background-color: #FBEAFF;
-    -fx-background-radius: 5;
+    -fx-background-radius: 10;
     -fx-effect: dropshadow(three-pass-box, #bdbdbd, 5 , 0 , 0 , 5);
 }
 .account_box {

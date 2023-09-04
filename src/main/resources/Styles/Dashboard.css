@@ -2,6 +2,10 @@
     -fx-background-color: #EEEEEE;
 }
 
+.profile_container {
+    -fx-background-color: #EEEEEE;
+}
+
 .user_name {
     -fx-font-size: 2.6em;
 
@@ -127,3 +131,4 @@
 .table-row-cell:even {
     -fx-background-color: #FFE0A8;
 }
+

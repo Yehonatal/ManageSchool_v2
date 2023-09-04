@@ -1,0 +1,87 @@
+.dashboard_create_client {
+    -fx-background-color: #EEEEEE;
+}
+
+.create_title {
+    -fx-font-size: 2.6em;
+    -fx-font-size: 2.6em;
+    -fx-font-family: Calibri;
+    -fx-font-weight: Bold;
+}
+
+.create_container{
+       -fx-background-color: #FFFFFF;
+       -fx-padding: 30 25 45 25;
+       -fx-spacing: 10;
+       -fx-effect: dropshadow(three-pass-box, #AAAAAA, 4 , 0 , 0 , 4);
+       -fx-border-color:  #FFC75F;
+       -fx-border-width: 0 0 0 2;
+}
+
+.big_container{
+       -fx-background-radius: 10 0 10 10;
+       -fx-border-radius: 10 0 10 10;
+}
+.small_container{
+       -fx-background-radius: 0 10 10 0;
+       -fx-border-radius: 0 10 10 0;
+}
+
+.create_container Label{
+    -fx-font-family: "Calibri Light";
+    -fx-font-size: 1.1em;
+}
+
+.create_container CheckBox{
+    -fx-font-family: "Calibri Light";
+    -fx-font-size: 0.9em;
+}
+
+
+TextField {
+    -fx-padding: 5 5 5 15;
+    -fx-pref-height: 20;
+    -fx-border-color:  #FFC75F;
+    -fx-border-radius: 5 5 5 5;
+    -fx-background-color: #EEEEEE;
+}
+
+Button {
+    -fx-font-size: 1.1em;
+    -fx-font-family: "Calibri";
+    -fx-text-fill: #000;
+    -fx-border-color: #FFC75F;
+    -fx-border-radius: 5 5 5 5;
+
+    -fx-background-color: #FFFFFF;
+
+    -fx-effect: dropshadow(three-pass-box, #AAAAAA, 4 , 0 , 0 , 4);
+}
+Button:hover {
+    -fx-text-fill: #FFF;
+    -fx-cursor: hand;
+    -fx-font-weight: Bold;
+    -fx-border-color: #FFF;
+    -fx-background-color: linear-gradient(to right, #FFE0A8,   #FFC75F);
+    -fx-border-radius: 5 5 5 5;
+}
+
+.error_lbl {
+    -fx-text-fill: red;
+}
+
+.payee_address_lbl {
+    -fx-background-color: #888888;
+    -fx-pref-height: 20;
+    -fx-text-fill: #FFFFFF;
+    -fx-border-radius: 5 5 5 5;
+    -fx-background-radius: 5 5 5 5;
+    -fx-effect: dropshadow(three-pass-box, #AAAAAA, 4 , 0 , 0 , 4);
+    -fx-padding: 5 5 5 15;
+
+}
+
+.date_lbl {
+    -fx-text-fill: #AAAAAA;
+    -fx-font-family: "Calibri Light";
+}

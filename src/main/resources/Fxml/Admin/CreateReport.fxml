@@ -4,13 +4,22 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="625.0" prefWidth="820.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.manageschool.manageschool.Controllers.Admin.CreateReportController">
-    <children>
-        <Label layoutX="236.0" layoutY="255.0" text="Comming soon.">
-            <font>
-                <Font name="Calibri Bold" size="50.0" />
-            </font>
-        </Label>
-    </children>
+<AnchorPane prefHeight="750.0" prefWidth="850.0" styleClass="dashboard_create_client" stylesheets="@../../Styles/AddStudent.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.manageschool.manageschool.Controllers.Admin.CreateReportController">
+    <Label fx:id="error_lbl" layoutX="626.0" layoutY="538.0" styleClass="error_lbl" />
+    <Label layoutX="24.0" layoutY="23.0" text="Lakeside Elementary School" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="25.0">
+        <font>
+            <Font name="Calibri Bold" size="25.0" />
+        </font>
+    </Label>
+    <Label fx:id="login_date" layoutX="797.0" layoutY="32.0" styleClass="date_lbl" text="Today 2015-12-29" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="25.0" />
+    <Label layoutX="25.0" layoutY="55.0" text="Create Report Card">
+        <font>
+            <Font name="Calibri Italic" size="20.0" />
+        </font>
+    </Label>
+   <Label layoutX="250.0" layoutY="317.0" text="Comming soon.">
+      <font>
+         <Font name="Calibri Bold" size="50.0" />
+      </font>
+   </Label>
 </AnchorPane>

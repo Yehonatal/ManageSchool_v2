@@ -19,8 +19,8 @@
 <?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="750.0" prefWidth="850.0" styleClass="dashboard" stylesheets="@../../Styles/Dashboard.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.manageschool.manageschool.Controllers.Admin.DashboardController">
-    <Label fx:id="login_date" layoutX="765.0" layoutY="27.0" styleClass="date_lbl" text="Today 2015-12-29" AnchorPane.rightAnchor="24.0" AnchorPane.topAnchor="27.0" />
-    <HBox layoutX="20.0" layoutY="119.0" prefHeight="180.0" prefWidth="620.0" styleClass="status_view" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="120.0">
+    <Label fx:id="login_date" layoutX="765.0" layoutY="27.0" styleClass="date_lbl" text="Today 2015-12-29" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="25.0" />
+    <HBox layoutX="20.0" layoutY="119.0" prefHeight="180.0" prefWidth="620.0" styleClass="status_view" translateY="10.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="120.0">
         <AnchorPane prefHeight="160.0" prefWidth="194.0">
             <Label layoutX="14.0" layoutY="14.0" styleClass="headings" text="Total" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="25.0" />
             <Label layoutX="14.0" layoutY="90.0" styleClass="account_number_safe" AnchorPane.bottomAnchor="45.0" AnchorPane.leftAnchor="14.0" />
@@ -57,7 +57,7 @@
                   <Font name="System Bold" size="12.0" />
                </font>
             </Text>
-            <Label fx:id="male_stu" layoutX="14.0" layoutY="73.0" styleClass="headings" text="365" />
+            <Label fx:id="male_stu" layoutX="14.0" layoutY="80.0" styleClass="headings" text="365" />
          </children>
       </AnchorPane>
       <AnchorPane layoutX="325.0" layoutY="20.0" prefHeight="160.0" prefWidth="194.0">
@@ -78,20 +78,20 @@
                   <Font name="System Bold" size="12.0" />
                </font>
             </Text>
-            <Label fx:id="female_stu" layoutX="14.0" layoutY="73.0" styleClass="headings" text="475" />
+            <Label fx:id="female_stu" layoutX="14.0" layoutY="83.0" styleClass="headings" text="475" />
          </children>
       </AnchorPane>
     </HBox>
-    <VBox layoutX="735.0" layoutY="120.0" prefHeight="180.0" prefWidth="200.0" styleClass="summary_view" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="120.0">
+    <VBox layoutX="735.0" layoutY="120.0" prefHeight="180.0" prefWidth="200.0" styleClass="summary_view" translateY="10.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="120.0">
         <VBox prefHeight="170.0" prefWidth="143.0" styleClass="acc_summary_container">
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Grade cut off" />
-            <Label styleClass="cutoff_grade" text="&gt; 2.5">
+            <Label styleClass="cutoff_grade" text="&gt; 2.50 cgpa">
                 <font>
                     <Font name="Yu Gothic Regular" size="12.0" />
                 </font></Label>
             <Line endX="160.0" />
             <Text layoutX="10.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="warning" />
-            <Label layoutX="10.0" layoutY="27.0" styleClass="warning_grade" text="&gt; 2.00">
+            <Label layoutX="10.0" layoutY="27.0" styleClass="warning_grade" text="&gt; 2.00 cgpa">
                 <font>
                     <Font name="Arial Bold" size="12.0" />
                 </font></Label>
@@ -103,7 +103,7 @@
          </VBox.margin>
         </VBox>
     </VBox>
-    <Text layoutX="20.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="section_title" text="School Status" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="90.0" />
+    <Text layoutX="20.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="section_title" text="School Status" translateY="10.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="90.0" />
     <Text layoutX="14.0" layoutY="354.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="section_title" text="Latest courses" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="340.0" />
     <VBox layoutX="585.0" layoutY="548.0" prefHeight="130.0" prefWidth="240.0" spacing="5.0">
         <padding>
@@ -130,7 +130,7 @@
          <TableColumn prefWidth="53.0" styleClass="last_column" text="Grade" />
       </columns>
    </TableView>
-   <Label layoutX="19.0" layoutY="19.0" text="Lakeside Elementary School">
+   <Label layoutX="19.0" layoutY="19.0" text="Lakeside Elementary School" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="25.0">
       <font>
          <Font name="Calibri Bold" size="25.0" />
       </font>
@@ -145,5 +145,10 @@
    </StackedBarChart>
    <Label layoutX="571.0" layoutY="540.0" text="Chart" />
    <Label layoutX="571.0" layoutY="339.0" text="Bar" />
+   <Label layoutX="25.0" layoutY="55.0" text="Dashboard" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="55.0">
+      <font>
+         <Font name="Calibri Italic" size="20.0" />
+      </font>
+   </Label>
 
 </AnchorPane>

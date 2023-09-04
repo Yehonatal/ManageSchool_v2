@@ -4,7 +4,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="625.0" prefWidth="820.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.manageschool.manageschool.Controllers.Student.ReportCardController">
     <children>
         <Label layoutX="236.0" layoutY="255.0" text="Comming soon.">
@@ -12,5 +11,16 @@
                 <Font name="Calibri Bold" size="50.0" />
             </font>
         </Label>
+      <Label layoutX="44.0" layoutY="43.0" text="Lakeside Elementary School" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="25.0">
+         <font>
+            <Font name="Calibri Bold" size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="login_date" layoutX="817.0" layoutY="52.0" styleClass="date_lbl" text="Today 2015-12-29" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="25.0" />
+      <Label layoutX="45.0" layoutY="75.0" text="Report Card" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="55.0">
+         <font>
+            <Font name="Calibri Italic" size="20.0" />
+         </font>
+      </Label>
     </children>
 </AnchorPane>

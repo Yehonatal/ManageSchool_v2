@@ -1,16 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="625.0" prefWidth="820.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.manageschool.manageschool.Controllers.Admin.CreateCourseController">
-    <children>
-        <Label layoutX="236.0" layoutY="255.0" text="Comming soon.">
-            <font>
-                <Font name="Calibri Bold" size="50.0" />
-            </font>
-        </Label>
-    </children>
+<AnchorPane prefHeight="709.0" prefWidth="865.0" styleClass="courses_container" stylesheets="@../../Styles/CreateCourse.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.manageschool.manageschool.Controllers.Admin.CreateCourseController">
+    <TableView fx:id="courses_table" layoutX="20.0" layoutY="105.0" prefHeight="294.0" prefWidth="815.0" stylesheets="@../../Styles/Courses.css">
+        <columns>
+            <TableColumn editable="false" prefWidth="29.0" sortable="false" styleClass="first-column" text="#" />
+            <TableColumn editable="false" prefWidth="443.0" sortable="false" text="Course Title" />
+            <TableColumn editable="false" prefWidth="133.0" sortable="false" text="Course Code" />
+            <TableColumn editable="false" prefWidth="97.0" sortable="false" text="Cr.Hr" />
+            <TableColumn editable="false" prefWidth="112.0" sortable="false" styleClass="last-column" text="ECTS" />
+        </columns>
+    </TableView>
+   <Label fx:id="login_date" layoutX="761.0" layoutY="30.0" styleClass="date_lbl" text="Today 2015-12-29" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="25.0" />
+   <Label layoutX="15.0" layoutY="22.0" text="Lakeside Elementary School" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="25.0">
+      <font>
+         <Font name="Calibri Bold" size="25.0" />
+      </font>
+   </Label>
+   <VBox layoutX="22.0" layoutY="417.0" prefHeight="242.0" prefWidth="295.0">
+      <styleClass>
+         <String fx:value="create_container" />
+         <String fx:value="big_container" />
+      </styleClass>
+      <children>
+         <Label text="Course Title: " />
+         <TextField fx:id="course_title_field" prefHeight="29.0" prefWidth="373.0" />
+         <Label layoutX="10.0" layoutY="10.0" text="Course Code:" />
+         <TextField fx:id="course_code_field" layoutX="10.0" layoutY="27.0" />
+         <Label layoutX="10.0" layoutY="52.0" text="Course Credit:" />
+         <TextField fx:id="course_cr_field" layoutX="10.0" layoutY="69.0" />
+      </children>
+   </VBox>
+   <VBox layoutX="342.0" layoutY="417.0" prefHeight="133.0" prefWidth="494.0">
+      <styleClass>
+         <String fx:value="create_container" />
+         <String fx:value="big_container" />
+      </styleClass>
+      <children>
+         <Label text="Course Description: " />
+         <TextField fx:id="course_des_field" prefHeight="29.0" prefWidth="373.0" />
+      </children>
+   </VBox>
+   <Button fx:id="add_student_btn" layoutX="340.0" layoutY="573.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="185.0" text="Add Course" />
+   <Label layoutX="25.0" layoutY="55.0" text="Create Course">
+      <font>
+         <Font name="Calibri Italic" size="20.0" />
+      </font>
+   </Label>
 </AnchorPane>

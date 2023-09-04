@@ -1,16 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="625.0" prefWidth="820.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.manageschool.manageschool.Controllers.Student.ProfileController">
+<AnchorPane prefHeight="663.0" prefWidth="849.0" styleClass="profile_container" stylesheets="@../../Styles/AddStudent.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.manageschool.manageschool.Controllers.Student.ProfileController">
    <children>
-      <Label layoutX="236.0" layoutY="255.0" text="Comming soon.">
+      <Label layoutX="25.0" layoutY="125.0" text="Student's Full Name">
          <font>
-            <Font name="Calibri Bold" size="50.0" />
+            <Font name="Calibri Bold" size="35.0" />
          </font>
       </Label>
+      <Label layoutX="34.0" layoutY="33.0" text="Lakeside Elementary School" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="25.0">
+         <font>
+            <Font name="Calibri Bold" size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="login_date" layoutX="807.0" layoutY="42.0" styleClass="date_lbl" text="Today 2015-12-29" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="25.0" />
+      <Label layoutX="35.0" layoutY="65.0" text="Profile" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="55.0">
+         <font>
+            <Font name="Calibri Italic" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="25.0" layoutY="178.0" text="Student ID">
+         <font>
+            <Font name="Calibri Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="170.0" layoutY="178.0" text="Student Status">
+         <font>
+            <Font name="Calibri Italic" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="25.0" layoutY="207.0" text="CGPA">
+         <font>
+            <Font name="Calibri Bold" size="20.0" />
+         </font>
+      </Label>
+      <TableView fx:id="courses_table" layoutX="25.0" layoutY="326.0" prefHeight="319.0" prefWidth="807.0" stylesheets="@../../Styles/Courses.css">
+         <columns>
+            <TableColumn editable="false" prefWidth="29.0" sortable="false" styleClass="first-column" text="#" />
+            <TableColumn editable="false" prefWidth="471.0" sortable="false" text="Course Title" />
+            <TableColumn editable="false" prefWidth="138.0" sortable="false" text="Course Code" />
+            <TableColumn editable="false" prefWidth="87.0" sortable="false" text="Cr.Hr" />
+            <TableColumn editable="false" sortable="false" styleClass="last-column" text="ECTS" />
+         </columns>
+      </TableView>
+      <Line endX="261.0" layoutX="126.0" layoutY="166.0" startX="-100.0" />
    </children>
 </AnchorPane>

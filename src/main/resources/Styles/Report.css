@@ -1,0 +1,8 @@
+.report_container {
+    -fx-background-color: #EEEEEE;
+}
+
+.date_lbl {
+    -fx-text-fill: #AAAAAA;
+    -fx-font-family: "Calibri Light";
+}

@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="625.0" prefWidth="820.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.manageschool.manageschool.Controllers.Student.ReportCardController">
+<AnchorPane stylesheets="@../../Styles/Report.css"  styleClass="report_container" prefHeight="625.0" prefWidth="820.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.manageschool.manageschool.Controllers.Student.ReportCardController">
     <children>
         <Label layoutX="236.0" layoutY="255.0" text="Comming soon.">
             <font>

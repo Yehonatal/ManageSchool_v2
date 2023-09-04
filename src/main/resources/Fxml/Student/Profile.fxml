@@ -7,7 +7,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="663.0" prefWidth="849.0" styleClass="profile_container" stylesheets="@../../Styles/AddStudent.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.manageschool.manageschool.Controllers.Student.ProfileController">
+<AnchorPane prefHeight="663.0" prefWidth="849.0" styleClass="profile_container" stylesheets="@../../Styles/Profile.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.manageschool.manageschool.Controllers.Student.ProfileController">
    <children>
       <Label layoutX="25.0" layoutY="125.0" text="Student's Full Name">
          <font>

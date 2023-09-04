@@ -48,7 +48,7 @@
                 </graphic>
             </Button>
         </VBox>
-        <VBox layoutX="9.0" prefHeight="120.0" prefWidth="156.0" styleClass="report_container" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0">
+        <VBox layoutX="9.0" prefHeight="120.0" prefWidth="156.0" styleClass="report_container" translateY="-15.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0">
             <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="Label" text="Report ?" />
             <TextFlow>
                 <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Use this to report any error and suggestions." />

@@ -10,24 +10,42 @@
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.text.TextFlow?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="216.0" styleClass="main_menu_container" stylesheets="@../../Styles/StudentMenu.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.manageschool.manageschool.Controllers.Student.StudentMenuController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="216.0" styleClass="main_menu_container" stylesheets="@../../Styles/StudentMenu.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.manageschool.manageschool.Controllers.Admin.AdminMenuController">
     <AnchorPane prefHeight="702.0" prefWidth="154.0" styleClass="left_container">
         <VBox layoutY="13.0" prefHeight="297.0" prefWidth="196.0" styleClass="title_container" AnchorPane.bottomAnchor="420.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <ImageView fitHeight="85.0" fitWidth="90.0" translateY="40.0">
                 <Image url="@../../Images/school.png" />
             </ImageView>
         </VBox>
-        <VBox prefHeight="500.0" prefWidth="180.0" styleClass="menu_container" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="100.0">
-            <Button fx:id="courses_btn" mnemonicParsing="false" prefWidth="150.0" styleClass="btn" text="Courses" textAlignment="CENTER" translateX="5.0" translateY="65.0">
+        <VBox layoutY="69.0" prefHeight="531.0" prefWidth="166.0" styleClass="menu_container" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="69.0">
+            <Button fx:id="dashboard_btn" mnemonicParsing="false" prefWidth="150.0" styleClass="btn" text="Dashboard" textAlignment="CENTER" translateX="5.0" translateY="90.0">
+            <graphic>
+               <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../../Images/seo-expert.png" />
+                  </image>
+               </ImageView>
+            </graphic>
+            </Button>
+            <Button fx:id="add_student_btn" mnemonicParsing="false" prefWidth="150.0" styleClass="btn" text="Add Students" textAlignment="CENTER" translateX="5.0" translateY="90.0">
             <graphic>
                <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../../Images/student.png" />
+                  </image>
+               </ImageView>
+            </graphic>
+            </Button>
+            <Button fx:id="create_courses_btn" mnemonicParsing="false" prefWidth="150.0" styleClass="btn" text="Create Courses" textAlignment="CENTER" translateX="5.0" translateY="90.0">
+            <graphic>
+               <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                   <image>
                      <Image url="@../../Images/certficate.png" />
                   </image>
                </ImageView>
             </graphic>
             </Button>
-            <Button fx:id="report_cards" mnemonicParsing="false" prefWidth="150.0" styleClass="btn" text="Report Cards" textAlignment="CENTER" translateX="5.0" translateY="65.0">
+            <Button fx:id="create_report_cards" mnemonicParsing="false" prefWidth="150.0" styleClass="btn" text="Create Report" textAlignment="CENTER" translateX="5.0" translateY="90.0">
             <graphic>
                <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                   <image>
@@ -36,13 +54,8 @@
                </ImageView>
             </graphic>
             </Button>
-            <Line endX="120.0" translateX="5.0" translateY="65.0" />
-            <Button fx:id="profile_btn" mnemonicParsing="false" prefWidth="150.0" styleClass="alt_menu_btn" text="Profile" textAlignment="CENTER" translateX="5.0" translateY="65.0">
-                <graphic>
-                    <FontAwesomeIconView glyphName="USER" size="15" />
-                </graphic>
-            </Button>
-            <Button fx:id="logout_btn" mnemonicParsing="false" prefWidth="150.0" styleClass="alt_menu_btn" text="Logout" textAlignment="CENTER" translateX="5.0" translateY="65.0">
+            <Line endX="120.0" translateX="5.0" translateY="90.0" />
+            <Button fx:id="logout_btn" mnemonicParsing="false" prefWidth="150.0" styleClass="alt_menu_btn" text="Logout" textAlignment="CENTER" translateX="5.0" translateY="90.0">
                 <graphic>
                     <FontAwesomeIconView glyphName="EXTERNAL_LINK" size="15" />
                 </graphic>

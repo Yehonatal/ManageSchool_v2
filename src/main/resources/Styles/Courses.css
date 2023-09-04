@@ -5,7 +5,6 @@
 .table-view {
     -fx-background-color: #FFC75F;
     -fx-background-radius: 10px;
-
 }
 
 .table-column {
@@ -13,7 +12,6 @@
     -fx-text-fill: white;
 
 }
-
 
 .first-column {
     -fx-background-radius: 10 0 0 0;
@@ -28,7 +26,7 @@
 }
 
 
-.table-row-cell:odd {
+.table-row-cell:even {
     -fx-background-color: #FFE0A8;
 }
 

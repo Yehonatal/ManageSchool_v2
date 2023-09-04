@@ -16,7 +16,7 @@
             <Font name="Calibri Bold" size="28.0" />
         </font>
     </Text>
-   <TableView fx:id="courses_table" layoutX="20.0" layoutY="105.0" prefHeight="544.0" prefWidth="825.0" stylesheets="@../../Styles/Courses.css">
+   <TableView fx:id="courses_table"  layoutX="20.0" layoutY="105.0" prefHeight="544.0" prefWidth="825.0" stylesheets="@../../Styles/Courses.css">
      <columns>
          <TableColumn editable="false" prefWidth="29.0" sortable="false" styleClass="first-column" text="#" />
        <TableColumn editable="false" prefWidth="493.0" sortable="false" text="Course Title" />

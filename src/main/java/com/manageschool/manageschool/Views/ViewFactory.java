@@ -1,5 +1,6 @@
 package com.manageschool.manageschool.Views;
 
+import com.manageschool.manageschool.Controllers.Admin.AdminController;
 import com.manageschool.manageschool.Controllers.Student.StudentController;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -15,6 +16,7 @@ public class ViewFactory {
     // Student View
     private AnchorPane coursesView;
     // Admin View
+    private AnchorPane dashboardView;
 
 
     // the constructor
@@ -34,6 +36,17 @@ public class ViewFactory {
         return coursesView;
     }
 
+    public AnchorPane getDashboardView(){
+        if(dashboardView == null){
+            try{
+                dashboardView = new FXMLLoader(getClass().getResource("/Fxml/Admin/Dashboard.fxml")).load();
+            } catch(Exception e){
+                e.printStackTrace();
+            }
+        }
+        return dashboardView;
+    }
+
 
     public AccountType getLoginAccountType() {return loginAccountType;}
 
@@ -45,6 +58,10 @@ public class ViewFactory {
         createStage(loader);
     }
     public void showAdminWindow() {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Admin/AdminSideView.fxml"));
+        AdminController adminController = new AdminController();
+        loader.setController(adminController);
+        createStage(loader);
     }
     public void showStudentWindow() {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Student/StudentSideView.fxml"));

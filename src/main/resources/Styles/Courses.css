@@ -1,3 +1,7 @@
+.courses_container {
+    -fx-background-color: #EEE;
+}
+
 .table-view {
     -fx-background-color: #FFC75F;
     -fx-background-radius: 10px;
@@ -7,15 +11,15 @@
 .table-column {
     -fx-background-color: #FFC75F;
     -fx-text-fill: white;
+
 }
 
 
-
-.table-view .column-header-background .filler .first-column {
-    -fx-background-radius: 10 0 0 0; /
+.first-column {
+    -fx-background-radius: 10 0 0 0;
 }
 
-.table-view .column-header-background .filler .last-column {
+.last-column {
     -fx-background-radius: 0 10 0 0;
 }
 
@@ -30,6 +34,8 @@
 
 .enroll_btn   {
     -fx-background-color: #FFC75F;
+    -fx-border-color: #FFC75F;
+    -fx-border-radius: 5 5 5 5;
     -fx-text-fill: white;
 }
 .enroll_btn:hover {

@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="709.0" prefWidth="865.0" stylesheets="@../../Styles/Courses.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.manageschool.manageschool.Controllers.Student.CoursesController">
+<AnchorPane prefHeight="709.0" prefWidth="865.0" styleClass="courses_container" stylesheets="@../../Styles/Courses.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.manageschool.manageschool.Controllers.Student.CoursesController">
     <Text fx:id="user_name" layoutX="20.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="user_name" text="Courses" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="64.0">
         <font>
             <Font name="Calibri Bold" size="28.0" />
@@ -18,11 +18,11 @@
     </Text>
    <TableView fx:id="courses_table" layoutX="20.0" layoutY="105.0" prefHeight="544.0" prefWidth="825.0" stylesheets="@../../Styles/Courses.css">
      <columns>
-         <TableColumn editable="false" prefWidth="29.0" sortable="false" text="#" />
+         <TableColumn editable="false" prefWidth="29.0" sortable="false" styleClass="first-column" text="#" />
        <TableColumn editable="false" prefWidth="493.0" sortable="false" text="Course Title" />
        <TableColumn editable="false" prefWidth="139.0" sortable="false" text="Course Code" />
          <TableColumn editable="false" prefWidth="86.0" sortable="false" text="Cr.Hr" />
-         <TableColumn editable="false" prefWidth="77.0" sortable="false" text="ECTS" />
+         <TableColumn editable="false" prefWidth="77.0" sortable="false" styleClass="last-column" text="ECTS" />
      </columns>
    </TableView>
    <ButtonBar layoutX="512.0" layoutY="656.0" prefHeight="40.0" prefWidth="339.0">

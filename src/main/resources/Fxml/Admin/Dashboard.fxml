@@ -2,6 +2,10 @@
 
 <?import java.lang.String?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.chart.StackedBarChart?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -13,7 +17,6 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
-<?import javafx.scene.text.TextFlow?>
 
 <AnchorPane prefHeight="750.0" prefWidth="850.0" styleClass="dashboard" stylesheets="@../../Styles/Dashboard.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.manageschool.manageschool.Controllers.Admin.DashboardController">
     <Label fx:id="login_date" layoutX="765.0" layoutY="27.0" styleClass="date_lbl" text="Today 2015-12-29" AnchorPane.rightAnchor="24.0" AnchorPane.topAnchor="27.0" />
@@ -65,7 +68,7 @@
          <children>
             <Label layoutX="14.0" layoutY="14.0" styleClass="headings" text="Female" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="25.0" />
             <Label layoutX="14.0" layoutY="90.0" styleClass="account_number_safe" AnchorPane.bottomAnchor="45.0" AnchorPane.leftAnchor="14.0" />
-            <ImageView fitHeight="51.0" fitWidth="55.0" layoutX="143.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="51.0" fitWidth="55.0" layoutX="126.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../Images/happy-female.png" />
                </image>
@@ -102,29 +105,29 @@
     </VBox>
     <Text layoutX="20.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="section_title" text="School Status" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="90.0" />
     <Text layoutX="14.0" layoutY="354.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="section_title" text="Latest courses" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="340.0" />
-    <VBox layoutX="590.0" layoutY="704.0" prefHeight="70.0" prefWidth="242.0" spacing="5.0" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="14.0">
+    <VBox layoutX="585.0" layoutY="548.0" prefHeight="130.0" prefWidth="240.0" spacing="5.0">
         <padding>
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
         </padding>
-        <TextFlow />
+      <PieChart fx:id="pie_chart" prefHeight="99.0" prefWidth="220.0" />
     </VBox>
-   <TableView fx:id="latest_courses_table" layoutX="20.0" layoutY="371.0" prefHeight="146.0" prefWidth="809.0" styleClass="round">
+   <TableView fx:id="latest_courses_table" layoutX="20.0" layoutY="371.0" prefHeight="146.0" prefWidth="543.0" styleClass="round">
      <columns>
        <TableColumn prefWidth="24.0" styleClass="first_column" text="#" />
-       <TableColumn prefWidth="493.0" text="Course Title " />
-         <TableColumn prefWidth="106.0" text="Course Code" />
-         <TableColumn prefWidth="100.0" text="ECTS" />
-         <TableColumn prefWidth="85.0" styleClass="last_column" text="Cr.Hr" />
+       <TableColumn prefWidth="270.0" text="Course Title " />
+         <TableColumn prefWidth="108.0" text="Course Code" />
+         <TableColumn prefWidth="87.0" text="ECTS" />
+         <TableColumn prefWidth="52.0" styleClass="last_column" text="Cr.Hr" />
      </columns>
    </TableView>
    <Text layoutX="20.0" layoutY="552.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="section_title" text="Best Students" />
-   <TableView fx:id="best_student_table" layoutX="20.0" layoutY="570.0" prefHeight="146.0" prefWidth="809.0" styleClass="round">
+   <TableView fx:id="best_student_table" layoutX="20.0" layoutY="570.0" prefHeight="146.0" prefWidth="543.0" styleClass="round">
       <columns>
          <TableColumn prefWidth="24.0" text="#" />
-         <TableColumn prefWidth="491.0" styleClass="first_column" text="Student Name" />
-         <TableColumn prefWidth="108.0" text="Student Id" />
-         <TableColumn prefWidth="104.0" text="Course Code" />
-         <TableColumn prefWidth="81.0" styleClass="last_column" text="Grade" />
+         <TableColumn prefWidth="266.0" styleClass="first_column" text="Student Name" />
+         <TableColumn prefWidth="113.0" text="Student Id" />
+         <TableColumn prefWidth="87.0" text="Course Code" />
+         <TableColumn prefWidth="53.0" styleClass="last_column" text="Grade" />
       </columns>
    </TableView>
    <Label layoutX="19.0" layoutY="19.0" text="Lakeside Elementary School">
@@ -132,5 +135,15 @@
          <Font name="Calibri Bold" size="25.0" />
       </font>
    </Label>
+   <StackedBarChart fx:id="bar_chart" layoutX="585.0" layoutY="369.0" prefHeight="150.0" prefWidth="240.0">
+     <xAxis>
+       <CategoryAxis side="BOTTOM" />
+     </xAxis>
+     <yAxis>
+       <NumberAxis side="LEFT" />
+     </yAxis>
+   </StackedBarChart>
+   <Label layoutX="571.0" layoutY="540.0" text="Chart" />
+   <Label layoutX="571.0" layoutY="339.0" text="Bar" />
 
 </AnchorPane>

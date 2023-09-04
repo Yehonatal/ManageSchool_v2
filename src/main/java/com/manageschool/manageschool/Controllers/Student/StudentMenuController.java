@@ -1,6 +1,7 @@
 package com.manageschool.manageschool.Controllers.Student;
 
 import com.manageschool.manageschool.Models.Model;
+import com.manageschool.manageschool.Views.StudentMenuOptions;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
@@ -34,12 +35,15 @@ public class StudentMenuController implements Initializable {
         Model.getInstance().getViewFactory().showLoginWindow();
     }
 
-    private void onProfile() {
-    }
-
-    private void onReports() {
-    }
-
     private void onCourses() {
+        Model.getInstance().getViewFactory().getStudentSelectorMenuItem().set(StudentMenuOptions.COURSES);
     }
+    private void onReports() {
+        Model.getInstance().getViewFactory().getStudentSelectorMenuItem().set(StudentMenuOptions.REPORT_CARD);
+    }
+    private void onProfile() {
+        Model.getInstance().getViewFactory().getStudentSelectorMenuItem().set(StudentMenuOptions.PROFILE);
+    }
+
+
 }

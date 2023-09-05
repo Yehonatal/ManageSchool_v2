@@ -1,4 +1,38 @@
 package com.manageschool.manageschool.Controllers.Admin;
 
-public class CreateCourseController {
+import com.manageschool.manageschool.Models.Courses;
+import com.manageschool.manageschool.Models.GetCourses;
+import javafx.collections.ObservableList;
+import javafx.fxml.Initializable;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
+
+import java.net.URL;
+import java.sql.SQLException;
+import java.util.ResourceBundle;
+
+public class CreateCourseController implements Initializable {
+    public TableView<Courses> courses_table;
+    public TableColumn<Courses, Integer> course_counter_col;
+    public TableColumn<Courses, String> course_title_col;
+    public TableColumn<Courses, String> course_code_col;
+    public TableColumn<Courses, Integer> course_cr_col;
+    public TableColumn<Courses, Integer> course_ects_col;
+
+    public CreateCourseController() throws SQLException {
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        course_counter_col.setCellValueFactory(new PropertyValueFactory<>("CourseCounter"));
+        course_title_col.setCellValueFactory(new PropertyValueFactory<>("CourseTitle"));
+        course_code_col.setCellValueFactory(new PropertyValueFactory<>("CourseCode"));
+        course_cr_col.setCellValueFactory(new PropertyValueFactory<>("CreditHours"));
+        course_ects_col.setCellValueFactory(new PropertyValueFactory<>("Ects"));
+        courses_table.setItems(observableList);
+    }
+    GetCourses getCourses = new GetCourses();
+    ObservableList<Courses> observableList = getCourses.populate();
+
 }

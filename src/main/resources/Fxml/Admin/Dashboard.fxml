@@ -111,24 +111,32 @@
         </padding>
       <PieChart fx:id="pie_chart" prefHeight="99.0" prefWidth="220.0" />
     </VBox>
-   <TableView fx:id="latest_courses_table" layoutX="20.0" layoutY="371.0" prefHeight="146.0" prefWidth="543.0" styleClass="round">
+   <TableView fx:id="latest_courses_table" layoutX="20.0" layoutY="371.0" prefHeight="146.0" prefWidth="543.0" stylesheets="@../../Styles/Courses.css">
      <columns>
-       <TableColumn prefWidth="24.0" styleClass="first_column" text="#" />
-       <TableColumn prefWidth="270.0" text="Course Title " />
-         <TableColumn prefWidth="108.0" text="Course Code" />
-         <TableColumn prefWidth="87.0" text="ECTS" />
-         <TableColumn prefWidth="52.0" styleClass="last_column" text="Cr.Hr" />
+       <TableColumn fx:id="course_counter_col" prefWidth="24.0" styleClass="first_column" text="#" />
+       <TableColumn fx:id="course_title_col" prefWidth="270.0" text="Course Title " />
+         <TableColumn fx:id="course_code_col" prefWidth="108.0" text="Course Code" />
+         <TableColumn fx:id="course_ects_col" prefWidth="87.0" text="ECTS" />
+         <TableColumn fx:id="course_cr_col" prefWidth="52.0" styleClass="last_column" text="Cr.Hr" />
      </columns>
+      <styleClass>
+         <String fx:value="round" />
+         <String fx:value="bold-wt-cell" />
+      </styleClass>
    </TableView>
    <Text layoutX="20.0" layoutY="552.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="section_title" text="Best Students" />
-   <TableView fx:id="best_student_table" layoutX="20.0" layoutY="570.0" prefHeight="146.0" prefWidth="543.0" styleClass="round">
+   <TableView fx:id="best_student_table" layoutX="20.0" layoutY="570.0" prefHeight="146.0" prefWidth="543.0" stylesheets="@../../Styles/Courses.css">
       <columns>
-         <TableColumn prefWidth="24.0" text="#" />
-         <TableColumn prefWidth="266.0" styleClass="first_column" text="Student Name" />
-         <TableColumn prefWidth="113.0" text="Student Id" />
-         <TableColumn prefWidth="87.0" text="Course Code" />
-         <TableColumn prefWidth="53.0" styleClass="last_column" text="Grade" />
+         <TableColumn fx:id="student_counter_col" prefWidth="24.0" text="#" />
+         <TableColumn fx:id="student_name_col" prefWidth="266.0" styleClass="first_column" text="Student Name" />
+         <TableColumn fx:id="student_id_col" prefWidth="113.0" text="Student Id" />
+         <TableColumn fx:id="student_course_col" prefWidth="87.0" text="Course Code" />
+         <TableColumn fx:id="student_grade_col" prefWidth="53.0" styleClass="last_column" text="Grade" />
       </columns>
+      <styleClass>
+         <String fx:value="round" />
+         <String fx:value="bold-wt-cell" />
+      </styleClass>
    </TableView>
    <Label layoutX="19.0" layoutY="19.0" text="University of Lakeside" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="25.0">
       <font>

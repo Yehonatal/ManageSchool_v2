@@ -5,11 +5,11 @@ import javafx.beans.property.SimpleStringProperty;
 
 public class Courses {
 
-    private SimpleIntegerProperty courseCounter;
-    private SimpleStringProperty courseTitle;
-    private SimpleStringProperty courseCode;
-    private SimpleIntegerProperty creditHours;
-    private SimpleIntegerProperty ects;
+    private final SimpleIntegerProperty courseCounter;
+    private final SimpleStringProperty courseTitle;
+    private final SimpleStringProperty courseCode;
+    private final SimpleIntegerProperty creditHours;
+    private final SimpleIntegerProperty ects;
 
     public int getCourseCounter() {
         return courseCounter.get();

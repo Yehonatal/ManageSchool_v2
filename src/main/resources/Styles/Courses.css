@@ -9,12 +9,16 @@
 
 .table-column {
     -fx-background-color: #FFC75F;
-    -fx-text-fill: #242424;
+    -fx-text-fill: #444444;
 
 }
 .bold-cell {
     -fx-font-weight: bold;
     -fx-padding: 5px;
+}
+
+.bold-wt-cell {
+    -fx-font-weight: bold;
 }
 .first-column {
     -fx-background-radius: 0 0 0 0;

@@ -5,10 +5,50 @@ import javafx.beans.property.SimpleStringProperty;
 
 public class Students {
     private final SimpleIntegerProperty studentCounter;
-    private final SimpleStringProperty studentID;
     private final SimpleStringProperty studentName;
+    private final SimpleStringProperty studentID;
+    private SimpleStringProperty studentUsername;
+    private SimpleStringProperty studentStatus;
+    private SimpleStringProperty studentGender;
     private final SimpleStringProperty studentCourseCode;
     private final SimpleStringProperty studentGrade;
+
+
+    public String getStudentUsername() {
+        return studentUsername.get();
+    }
+
+    public SimpleStringProperty studentUsernameProperty() {
+        return studentUsername;
+    }
+
+    public void setStudentUsername(String studentUsername) {
+        this.studentUsername.set(studentUsername);
+    }
+
+    public String getStudentStatus() {
+        return studentStatus.get();
+    }
+
+    public SimpleStringProperty studentStatusProperty() {
+        return studentStatus;
+    }
+
+    public void setStudentStatus(String studentStatus) {
+        this.studentStatus.set(studentStatus);
+    }
+
+    public String getStudentGender() {
+        return studentGender.get();
+    }
+
+    public SimpleStringProperty studentGenderProperty() {
+        return studentGender;
+    }
+
+    public void setStudentGender(String studentGender) {
+        this.studentGender.set(studentGender);
+    }
 
     public int getStudentCounter() {
         return studentCounter.get();
@@ -77,4 +117,12 @@ public class Students {
         this.studentCourseCode = new SimpleStringProperty(studentCourseCode);
         this.studentGrade = new SimpleStringProperty(studentGrade);
     }
+
+    public Students(int studentCounter, String studentID, String studentName, String studentUsername, String studentStatus, String studentGender) {
+        this(studentCounter, studentID, studentName, null, null); // Use the other constructor with default values
+        this.studentUsername = new SimpleStringProperty(studentUsername);
+        this.studentStatus = new SimpleStringProperty(studentStatus);
+        this.studentGender = new SimpleStringProperty(studentGender);
+    }
+
 }

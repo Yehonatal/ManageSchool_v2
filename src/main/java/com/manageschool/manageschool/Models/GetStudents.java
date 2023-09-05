@@ -29,4 +29,27 @@ public class GetStudents {
         }
         return observableList;
     }
+
+    public ObservableList<Students> populateStudents() throws SQLException {
+        ObservableList<Students> observableList = FXCollections.observableArrayList();
+
+        try (Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/manageschool_v2", "sqluser", "password"); PreparedStatement preparedStatement = conn.prepareStatement(" SELECT * FROM student");
+             ResultSet result = preparedStatement.executeQuery()) {
+             while (result.next()) {
+                int colCounter = result.getInt("StudentCounter");
+                String colName = result.getString("StudentName");
+                String colID = result.getString("StudentId");
+                String colUser = result.getString("StudentUserName");
+                String colStatus = result.getString("StudentStatus");
+                String colGender = result.getString("StudentGender");
+                Students students = new Students(colCounter, colID, colName, colUser, colStatus, colGender);
+                observableList.add(students);
+             }
+        } catch (SQLException e) {
+            throw new SQLException("Error while selecting data from the database", e);
+        }
+        return observableList;
+    }
+
+
 }

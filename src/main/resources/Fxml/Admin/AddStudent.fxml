@@ -5,13 +5,15 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="750.0" prefWidth="850.0" styleClass="dashboard_create_client" stylesheets="@../../Styles/AddStudent.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.manageschool.manageschool.Controllers.Admin.AddStudentController">
-    <VBox layoutX="25.0" layoutY="175.0" prefHeight="352.0" prefWidth="381.0">
+    <VBox layoutX="25.0" layoutY="372.0" prefHeight="282.0" prefWidth="381.0">
         <Label text="First Name:" />
         <TextField fx:id="first_name_field" />
         <Label layoutX="10.0" layoutY="10.0" text="Last Name:" />
@@ -19,7 +21,13 @@
         <Label layoutX="10.0" layoutY="52.0" text="ID:" />
         <TextField fx:id="student_id_field" layoutX="10.0" layoutY="69.0" />
         <Label layoutX="10.0" layoutY="94.0" text="Username :" />
-        <CheckBox fx:id="show_username" mnemonicParsing="false" />
+      <styleClass>
+         <String fx:value="create_container" />
+         <String fx:value="big_container" />
+      </styleClass>
+    </VBox>
+    <VBox layoutX="441.0" layoutY="371.0" prefHeight="117.0" prefWidth="370.0">
+      <CheckBox fx:id="show_username" layoutX="37.0" layoutY="129.0" mnemonicParsing="false" text="Generate username" />
         <Label fx:id="user_name_view" prefWidth="319.0" styleClass="payee_address_lbl">
             <VBox.margin>
                 <Insets />
@@ -28,12 +36,6 @@
                 <Insets bottom="2.0" left="15.0" right="2.0" top="2.0" />
             </padding>
         </Label>
-      <styleClass>
-         <String fx:value="create_container" />
-         <String fx:value="big_container" />
-      </styleClass>
-    </VBox>
-    <VBox layoutX="441.0" layoutY="175.0" prefHeight="85.0" prefWidth="370.0">
         <Label text="Accounts Status:" />
         <CheckBox fx:id="student_status" mnemonicParsing="false" text="Active" />
       <styleClass>
@@ -41,7 +43,7 @@
          <String fx:value="small_container" />
       </styleClass>
     </VBox>
-    <Button fx:id="add_student_btn" layoutX="441.0" layoutY="324.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="185.0" text="Add Student" />
+    <Button fx:id="add_student_btn" layoutX="441.0" layoutY="578.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="185.0" text="Add Student" />
     <Label fx:id="error_lbl" layoutX="626.0" layoutY="538.0" styleClass="error_lbl" />
    <Label layoutX="24.0" layoutY="23.0" text="University of Lakeside" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="25.0">
       <font>
@@ -54,4 +56,18 @@
          <Font name="Calibri Italic" size="20.0" />
       </font>
    </Label>
+   <TableView fx:id="student_table" layoutX="25.0" layoutY="120.0" prefHeight="225.0" prefWidth="791.0" stylesheets="@../../Styles/Courses.css">
+      <columns>
+         <TableColumn fx:id="student_counter_col" prefWidth="24.0" text="#" />
+         <TableColumn fx:id="student_name_col" prefWidth="339.0" styleClass="first_column" text="Student Name" />
+         <TableColumn fx:id="student_id_col" prefWidth="112.0" text="ID" />
+         <TableColumn fx:id="student_username_col" prefWidth="159.0" text="Username" />
+         <TableColumn fx:id="student_status_col" prefWidth="87.0" styleClass="last_column" text="Status" />
+         <TableColumn fx:id="student_gender_col" prefWidth="69.0" styleClass="last_column" text="Gender" />
+      </columns>
+      <styleClass>
+         <String fx:value="round" />
+         <String fx:value="bold-wt-cell" />
+      </styleClass>
+   </TableView>
 </AnchorPane>

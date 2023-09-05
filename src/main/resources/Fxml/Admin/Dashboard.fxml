@@ -85,13 +85,13 @@
     <VBox layoutX="735.0" layoutY="120.0" prefHeight="180.0" prefWidth="200.0" styleClass="summary_view" translateY="10.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="120.0">
         <VBox prefHeight="170.0" prefWidth="143.0" styleClass="acc_summary_container">
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Grade cut off" />
-            <Label styleClass="cutoff_grade" text="&gt; 2.50 cgpa">
+            <Label styleClass="cutoff_grade" text="CGPA &gt; 2.50">
                 <font>
                     <Font name="Yu Gothic Regular" size="12.0" />
                 </font></Label>
             <Line endX="160.0" />
             <Text layoutX="10.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="warning" />
-            <Label layoutX="10.0" layoutY="27.0" styleClass="warning_grade" text="&gt; 2.00 cgpa">
+            <Label layoutX="10.0" layoutY="27.0" styleClass="warning_grade" text="CGPA &gt; 2.00">
                 <font>
                     <Font name="Arial Bold" size="12.0" />
                 </font></Label>

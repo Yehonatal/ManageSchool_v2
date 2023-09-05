@@ -20,13 +20,13 @@
         <TextField fx:id="last_name_field" layoutX="10.0" layoutY="27.0" />
         <Label layoutX="10.0" layoutY="52.0" text="ID:" />
         <TextField fx:id="student_id_field" layoutX="10.0" layoutY="69.0" />
-        <Label layoutX="10.0" layoutY="94.0" text="Username :" />
       <styleClass>
          <String fx:value="create_container" />
          <String fx:value="big_container" />
       </styleClass>
     </VBox>
     <VBox layoutX="441.0" layoutY="371.0" prefHeight="117.0" prefWidth="370.0">
+        <Label text="Username :" />
       <CheckBox fx:id="show_username" layoutX="37.0" layoutY="129.0" mnemonicParsing="false" text="Generate username" />
         <Label fx:id="user_name_view" prefWidth="319.0" styleClass="payee_address_lbl">
             <VBox.margin>
@@ -43,7 +43,7 @@
          <String fx:value="small_container" />
       </styleClass>
     </VBox>
-    <Button fx:id="add_student_btn" layoutX="441.0" layoutY="578.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="185.0" text="Add Student" />
+    <Button fx:id="add_student_btn" layoutX="441.0" layoutY="605.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="185.0" text="Add Student" />
     <Label fx:id="error_lbl" layoutX="626.0" layoutY="538.0" styleClass="error_lbl" />
    <Label layoutX="24.0" layoutY="23.0" text="University of Lakeside" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="25.0">
       <font>

@@ -56,9 +56,6 @@ public class LoginController implements Initializable {
             Model.getInstance().getViewFactory().showAdminWindow();
         } else if (Model.getInstance().getViewFactory().getLoginAccountType() == AccountType.STUDENT && getData.getVerified(user,psw,"student")) {
             Model.getInstance().getViewFactory().showStudentWindow();
-        } else {
-            Model.getInstance().getViewFactory().showStudentWindow();
-//            System.out.println("not working!");
         }
     }
 

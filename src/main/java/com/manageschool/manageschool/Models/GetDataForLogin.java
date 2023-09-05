@@ -5,10 +5,10 @@ import java.sql.*;
 public class GetDataForLogin {
     public boolean getVerified(String usr, String psw, String table) throws SQLException {
         if (table.equals("admin")) {
-            return selectData(usr, psw, "adminLog", "adminUserName", "adminUserPsw");
+            return selectData(usr, psw, "administer", "AdminUserName", "AdminPassword");
         }
         if (table.equals("student")) {
-            return selectData(usr, psw, "studentLog", "studentName", "studentId");
+            return selectData(usr, psw, "student", "StudentName", "StudentUserName");
         }
         return false;
     }
@@ -19,7 +19,7 @@ public class GetDataForLogin {
         PreparedStatement preparedStatement = null;
 
         try {
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/manageschool", "sqluser", "password");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/manageschool_v2", "sqluser", "password");
             preparedStatement = conn.prepareStatement(
                     String.format("SELECT * FROM %s WHERE %s = ? AND %s = ?", table, userColumn, pswColumn)
             );

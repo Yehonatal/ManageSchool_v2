@@ -19,6 +19,7 @@
 
 .bold-wt-cell {
     -fx-font-weight: bold;
+
 }
 .first-column {
     -fx-background-radius: 0 0 0 0;

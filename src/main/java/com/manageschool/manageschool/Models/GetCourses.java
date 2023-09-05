@@ -46,4 +46,13 @@ public class GetCourses {
                 LIMIT 5;""";
         return getCourses(query);
     }
+
+    public ObservableList<Courses> populateWithUsersCourses() throws SQLException {
+        String query = """
+                SELECT *
+                FROM manageschool_v2.course
+                ORDER BY CourseCounter DESC
+                LIMIT 5;""";
+        return getCourses(query);
+    }
 }

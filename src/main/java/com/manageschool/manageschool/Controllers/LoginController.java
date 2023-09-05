@@ -1,10 +1,10 @@
 package com.manageschool.manageschool.Controllers;
 
+import com.manageschool.manageschool.Controllers.Student.ProfileController;
 import com.manageschool.manageschool.Models.GetDataForLogin;
 import com.manageschool.manageschool.Models.Model;
 import com.manageschool.manageschool.Views.AccountType;
 import javafx.collections.FXCollections;
-import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
@@ -26,6 +26,8 @@ public class LoginController implements Initializable {
     public Label error_lbl;
     public Button close_btn;
 
+    public LoginController() throws SQLException {
+    }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -33,10 +35,16 @@ public class LoginController implements Initializable {
         acc_selector.setValue(Model.getInstance().getViewFactory().getLoginAccountType());
         acc_selector.valueProperty().addListener(observable -> Model.getInstance().getViewFactory().setLoginAccountType(acc_selector.getValue()));
         login_btn.setOnAction(event -> {
+//            ProfileController profile = null;
+//            profile = ProfileController.getInstance();
+//            profile.setStudentInfo(username_field.getText(),  user_password_field.getText(),"Active");
+
             try {
                 if (username_field.getText().isBlank() || user_password_field.getText().isBlank()){
                     error_lbl.setText("Maybe try inserting username and password :)");
-                }else{ onLogin(); }
+                }else{
+                    onLogin();
+                }
             } catch (SQLException e) {
                 throw new RuntimeException(e);
             }
@@ -50,6 +58,7 @@ public class LoginController implements Initializable {
         String user = username_field.getText();
         String psw = user_password_field.getText();
 
+
         GetDataForLogin getData = new GetDataForLogin();
 
         if (Model.getInstance().getViewFactory().getLoginAccountType() == AccountType.ADMIN && getData.getVerified(user,psw,"admin")){
@@ -59,11 +68,8 @@ public class LoginController implements Initializable {
         }
     }
 
-
     public void closeLoginStage() {
         Stage stage = (Stage) error_lbl.getScene().getWindow();
         Model.getInstance().getViewFactory().closeStage(stage);
     }
 }
-
-

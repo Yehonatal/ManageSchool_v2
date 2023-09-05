@@ -1,6 +1,6 @@
 package com.manageschool.manageschool.Controllers;
 
-import com.manageschool.manageschool.Controllers.Student.ProfileController;
+import com.manageschool.manageschool.Models.AppDataModel;
 import com.manageschool.manageschool.Models.GetDataForLogin;
 import com.manageschool.manageschool.Models.Model;
 import com.manageschool.manageschool.Views.AccountType;
@@ -25,6 +25,8 @@ public class LoginController implements Initializable {
     public Button login_btn;
     public Label error_lbl;
     public Button close_btn;
+    public String name;
+    public String ID;
 
     public LoginController() throws SQLException {
     }
@@ -35,9 +37,8 @@ public class LoginController implements Initializable {
         acc_selector.setValue(Model.getInstance().getViewFactory().getLoginAccountType());
         acc_selector.valueProperty().addListener(observable -> Model.getInstance().getViewFactory().setLoginAccountType(acc_selector.getValue()));
         login_btn.setOnAction(event -> {
-//            ProfileController profile = null;
-//            profile = ProfileController.getInstance();
-//            profile.setStudentInfo(username_field.getText(),  user_password_field.getText(),"Active");
+            name = username_field.getText();
+            ID = user_password_field.getText();
 
             try {
                 if (username_field.getText().isBlank() || user_password_field.getText().isBlank()){
@@ -57,7 +58,8 @@ public class LoginController implements Initializable {
 
         String user = username_field.getText();
         String psw = user_password_field.getText();
-
+        AppDataModel.getInstance().setUsername(name);
+        AppDataModel.getInstance().setUserID(ID);
 
         GetDataForLogin getData = new GetDataForLogin();
 

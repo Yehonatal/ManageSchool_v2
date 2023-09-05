@@ -9,7 +9,7 @@
 <?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="663.0" prefWidth="849.0" styleClass="profile_container" stylesheets="@../../Styles/Profile.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.manageschool.manageschool.Controllers.Student.ProfileController">
-   <Text fx:id="student_name" layoutX="25.0" layoutY="144.0" text="Student's Full Name">
+   <Text fx:id="student_name" layoutX="25.0" layoutY="144.0" styleClass="profile_heading" text="Student's Full Name">
       <font>
          <Font name="Calibri Bold" size="35.0" />
       </font>
@@ -25,7 +25,7 @@
          <Font name="Calibri Italic" size="20.0" />
       </font>
    </Label>
-   <Text fx:id="student_id" layoutX="25.0" layoutY="178.0" text="Student ID">
+   <Text fx:id="student_id" layoutX="25.0" layoutY="178.0" styleClass="profile_heading" text="Student ID">
       <font>
          <Font name="Calibri Bold" size="20.0" />
       </font>

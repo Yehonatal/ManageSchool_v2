@@ -1,3 +1,8 @@
 .profile_container {
     -fx-background-color: #EEEEEE;
 }
+
+.profile_heading {
+    -fx-text-fill: #FFF;
+    -fx-background-color: red;
+}

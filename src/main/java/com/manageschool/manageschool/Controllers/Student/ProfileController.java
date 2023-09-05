@@ -1,5 +1,6 @@
 package com.manageschool.manageschool.Controllers.Student;
 
+import com.manageschool.manageschool.Models.AppDataModel;
 import com.manageschool.manageschool.Models.Courses;
 import com.manageschool.manageschool.Models.GetCourses;
 import javafx.collections.ObservableList;
@@ -23,7 +24,8 @@ public class ProfileController implements Initializable {
     public Text student_name;
     public Text student_id;
     public Text student_status;
-
+    private String name;
+    private String ID;
     private static ProfileController instance;
 
     public ProfileController() throws SQLException {
@@ -32,20 +34,21 @@ public class ProfileController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         instance = this;
-
         profile_counter_col.setCellValueFactory(new PropertyValueFactory<>("CourseCounter"));
         profile_course_title_col.setCellValueFactory(new PropertyValueFactory<>("CourseTitle"));
         profile_course_code_col.setCellValueFactory(new PropertyValueFactory<>("CourseCode"));
         profile_credit_col.setCellValueFactory(new PropertyValueFactory<>("CreditHours"));
         profile_ects_col.setCellValueFactory(new PropertyValueFactory<>("Ects"));
         profile_courses_table.setItems(observableUserTakingCourseList);
+
+        String name = AppDataModel.getInstance().getUsername();
+        String id = AppDataModel.getInstance().getUserID();
+
+        student_name.setText(name);
+        student_id.setText(id.split("_")[1]);
+        student_status.setText("Active");
     }
 
-    public void setStudentInfo(String name, String id, String status) {
-        student_name.setText(name);
-        student_id.setText(id);
-        student_status.setText(status);
-    }
 
     public static ProfileController getInstance() {
         return instance;

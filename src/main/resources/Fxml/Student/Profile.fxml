@@ -14,7 +14,7 @@
             <Font name="Calibri Bold" size="35.0" />
          </font>
       </Label>
-      <Label layoutX="34.0" layoutY="33.0" text="Lakeside Elementary School" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="25.0">
+      <Label layoutX="34.0" layoutY="33.0" text="University of Lakeside" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="25.0">
          <font>
             <Font name="Calibri Bold" size="25.0" />
          </font>

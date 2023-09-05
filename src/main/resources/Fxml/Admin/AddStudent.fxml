@@ -43,7 +43,7 @@
     </VBox>
     <Button fx:id="add_student_btn" layoutX="441.0" layoutY="324.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="185.0" text="Add Student" />
     <Label fx:id="error_lbl" layoutX="626.0" layoutY="538.0" styleClass="error_lbl" />
-   <Label layoutX="24.0" layoutY="23.0" text="Lakeside Elementary School" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="25.0">
+   <Label layoutX="24.0" layoutY="23.0" text="University of Lakeside" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="25.0">
       <font>
          <Font name="Calibri Bold" size="25.0" />
       </font>

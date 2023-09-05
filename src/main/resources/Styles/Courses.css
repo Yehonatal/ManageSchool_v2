@@ -53,3 +53,7 @@
      -fx-pref-height: 35;
      -fx-effect: dropshadow(three-pass-box, #AAAAAA, 4 , 0 , 0 , 2);
  }
+ .date_lbl {
+     -fx-text-fill: #AAAAAA;
+     -fx-font-family: "Calibri Light";
+ }

@@ -9,22 +9,33 @@
 
 .table-column {
     -fx-background-color: #FFC75F;
-    -fx-text-fill: white;
+    -fx-text-fill: #242424;
 
 }
-
+.bold-cell {
+    -fx-font-weight: bold;
+    -fx-padding: 5px;
+}
 .first-column {
-    -fx-background-radius: 10 0 0 0;
+    -fx-background-radius: 0 0 0 0;
 }
 
 .last-column {
-    -fx-background-radius: 0 10 0 0;
+    -fx-background-radius: 0 0 0 0;
 }
 
 .table-row-cell:odd {
     -fx-background-color: #FFC75F33;
 }
+.table-view .scroll-bar * {
+    -fx-min-width: 0;
+    -fx-pref-width: 0;
+    -fx-max-width: 0;
 
+    -fx-min-height: 0;
+    -fx-pref-height: 0;
+    -fx-max-height: 0;
+}
 
 .table-row-cell:even {
     -fx-background-color: #FFE0A8;
